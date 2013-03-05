@@ -1,0 +1,25 @@
+{
+  "name": "zorba",
+  "version": "0.1.0",
+  "main": "build/Release/zorba.node",
+  "bin": {
+    "zorba": "build/Release/zorba.node"
+  },
+  "description": "ZORBA - Modern Query Processor",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "bazaar",
+    "url": "lp:~zorba-coders/zorba/bug1110134"
+  },
+  "author": "Rodolfo Ochoa <rodolfo.ochoa@gmail.com>",
+  "license": "Apache 2.0",
+  "readmeFilename": "README.md",
+  "keywords": [
+    "XQuery",
+    "JSONiq",
+    "processor",
+    "zorba"
+  ]
+}

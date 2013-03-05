@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zorba", "zorba.vcxproj", "{36F4E46C-303B-9729-8F2C-8BB5B0F1E6DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36F4E46C-303B-9729-8F2C-8BB5B0F1E6DE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{36F4E46C-303B-9729-8F2C-8BB5B0F1E6DE}.Debug|Win32.Build.0 = Debug|Win32
+		{36F4E46C-303B-9729-8F2C-8BB5B0F1E6DE}.Release|Win32.ActiveCfg = Release|Win32
+		{36F4E46C-303B-9729-8F2C-8BB5B0F1E6DE}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
