@@ -10,8 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "bazaar",
-    "url": "lp:~zorba-coders/zorba/bug1110134"
+    "type": "git",
+    "url": "https://github.com/hybridum/zorba-node.git"
   },
   "author": "Rodolfo Ochoa <rodolfo.ochoa@gmail.com>",
   "license": "Apache 2.0",
