@@ -46,23 +46,24 @@ Handle<Value> Execute(const Arguments& args) {
 
   v8::String::Utf8Value param1(args[0]->ToString());
   std::string sQuery(*param1);
+  std::ostringstream lOutputStream;
+  Zorba_CompilerHints_t hints;
+  zorba::XQuery_t query = getZorbaInstance()->createQuery();
   
   switch (args.Length()) {
   case 1:
     {
-    Zorba_CompilerHints_t hints;
-    std::ostringstream lOutputStream;
-    zorba::XQuery_t query = getZorbaInstance()->createQuery();
-    query->compile(sQuery, hints);
-    query->execute(lOutputStream);
+      try {
+        query->compile(sQuery, hints);
+        query->execute(lOutputStream);
+      } catch (zorba::ZorbaException e) {
+        ThrowException(Exception::Error(String::New(e.what())));
+      }
     return scope.Close(String::New(lOutputStream.str().c_str()));
     }
     break;
   case 3:
     {
-      Zorba_CompilerHints_t hints;
-      std::ostringstream lOutputStream;
-      zorba::XQuery_t query = getZorbaInstance()->createQuery();
       NodeDiagnosticHandler diagnosticHandler(Local<Function>::Cast(args[2]));
       query->registerDiagnosticHandler(&diagnosticHandler);
 

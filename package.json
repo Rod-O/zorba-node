@@ -1,10 +1,7 @@
 {
   "name": "zorba",
   "version": "0.1.0",
-  "main": "build/Release/zorba.node",
-  "bin": {
-    "zorba": "build/Release/zorba.node"
-  },
+  "main": "./build/Release/zorba",
   "description": "ZORBA - Modern Query Processor",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
