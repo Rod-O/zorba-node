@@ -1,19 +1,23 @@
 {
-  "targets": [
-    {
+  "targets": 
+  [{
       "target_name": "zorba",
       "product_extension": "node",
       "sources": [ 
-        "src/execute.cpp",
-        "src/helpers.cpp",
-        "src/main.cpp",
-        "src/nodediagnostichandler.cpp"
+        "./src/Execute.cpp",
+        "./src/helpers.cpp",
+        "./src/main.cpp",
+        "./src/NodeDiagnosticHandler.cpp"
       ],
+
+      'cflags!': [ '-fno-exceptions' ],
+      'cflags_cc!': [ '-fno-exceptions' ],
       "include_dirs": [
-        "include"
+        "./include"
       ],
       "conditions": [
-          ['OS=="win"', 
+          [
+          'OS=="win"', 
             {
               "link_settings": {
                 "libraries": [
@@ -24,9 +28,15 @@
                 "win/include"
               ]
             }
-          ],
+          ], [
+          'OS=="mac"', 
+            {
+              'xcode_settings': 
+              {
+                'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'
+              }
+	    }
+          ]
       ]
-    }
-    
-  ]
+  }]
 }
