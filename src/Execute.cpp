@@ -64,7 +64,8 @@ Handle<Value> Execute(const Arguments& args) {
     break;
   case 3:
     {
-      NodeDiagnosticHandler diagnosticHandler(Local<Function>::Cast(args[2]));
+      Local<Function> function(Local<Function>::Cast(args[2]));
+      NodeDiagnosticHandler diagnosticHandler(function);
       query->registerDiagnosticHandler(&diagnosticHandler);
 
       query->compile(sQuery, hints);
