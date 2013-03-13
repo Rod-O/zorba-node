@@ -39,8 +39,13 @@
                 "/usr/include",
                 "/opt/local/include",
                 "/usr/local/include"
-              ]
-	    }
+              ],
+              "link_settings": {
+                "libraries": [
+                  "/opt/local/lib/libzorba_simplestore.dylib",
+                ]
+              }             
+            }
           ]
       ]
   }]
