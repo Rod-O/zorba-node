@@ -60,7 +60,7 @@
               ],
               "link_settings": {
                 "libraries": [
-                  "/usr/lib/libzorba_simplestore.so",
+                  "-lzorba_simplestore"
                 ]
               }             
             }
